@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/8021a6c096.js" crossorigin="anonymous"></script>
+  <title>Maker pre-launch landing page</title>
+</head>
+<body>
+  <div class="logo-container">
+
+    <img src="./assets/logo.svg" alt="maker logo">
+
+  </div>
+  <header>
+
+    <img src="./assets/illustration-hero-mobile.png" alt="illustrations" class="mobile-img">
+    <div class="text-container">
+      <h1>Get paid for the work you <span>love</span> to do.</h1>
+      
+      <p>The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered.</p>
+
+      <img src="./assets/icon-scroll.svg" alt="scroll">
+    </div>
+
+  </header>
+  <section class="feature-section">
+
+    <div class="feat-container">
+      <div class="img-container">
+        <img src="./assets/illustration-passions.svg" alt="passions">
+      </div>
+      <div class="text-container">
+        <h3>Indulge your passions</h3>
+        <p>Your passions shouldn't be just for the weekend. Earn a living doing what you love.</p>
+      </div>
+    </div>
+
+    <div class="feat-container">
+      <div class="img-container">
+        <img src="./assets/illustration-financial-freedom.svg" alt="financial freedom">
+      </div>
+      <div class="text-container">
+        <h3>Gain financial freedom</h3>
+        <p>Start making money work for you. There’s nothing quite like earning while you sleep.</p>
+      </div>
+    </div>
+
+    <div class="feat-container">
+      <div class="img-container">
+        <img src="./assets/illustration-lifestyle.svg" alt="lifestyle">
+      </div>
+      <div class="text-container">
+        <h3>Choose your lifestyle</h3>
+        <p>Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.</p>
+      </div>
+    </div>
+
+    <div class="feat-container">
+      <div class="img-container">
+        <img src="./assets/illustration-work-anywhere.svg" alt="work from anywhere">
+      </div>
+      <div class="text-container">
+        <h3>Work from anywhere</h3>
+        <p>Selling online means not being pinned down. Want to work AND travel? Go for it!</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="pricing-section">
+
+    <div class="pricing-header">
+      <h2>Our pricing plans</h2>
+      <p>We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.</p>
+    </div>
+
+    <div class="price-tier-container">
+      <div class="price-tier-smaller">
+        <img src="./assets/icon-free.svg" alt="shapes">
+        <h3>Dip your toe</h3>
+        <p>Just getting started? No problem at all! Our free plan will take you a long way.</p>
+        <strong>Free</strong>
+        <ul class="fa-ul free-list">
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>Unlimited products</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>Basic analytics</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>Limited marketplace exposure</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>10% fee per transaction</li>
+        </ul>
+      </div>
+      <div class="price-tier-larger">
+        <img src="./assets/icon-paid.svg" alt="shapes">
+        <h3>Dive right in</h3>
+        <p>Ready for the big time? Our paid plan will help you take your business to the next level.</p>
+        <p><strong>$25.00</strong>/month</p>
+        <ul class="fa-ul paid-list">
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>Custom domain</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>Advanced analytics and reports</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>High marketplace visibility</li>
+          <li><span class="fa-li"></span><i class="fas fa-check"></i>5% fee per transaction</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="signup-section">
+
+    <h2>Get notified when we launch</h2>
+    <form>
+      <p class="input-error-text">Oops! That doesn't look like an email address</p>
+      <input type="email" placeholder="Email address" class="email-input">
+      <button class="submit-button">Get notified</button>
+    </form>
+
+  </section>
+  <script>
+
+    const emailInput = document.querySelector('.email-input')
+    const button = document.querySelector('.submit-button')
+    const message = document.querySelector('.input-error-text')
+    
+    button.addEventListener('click', (e) => {
+      
+      if ( !emailInput.validity.valid || emailInput.value == ''){
+        e.preventDefault()
+        emailInput.classList.add('input-error')
+        message.style.display = 'block'
+      } else {
+        
+      }
+    })
+
+  </script>
+</body>
+</html>
